@@ -5,15 +5,20 @@
 \usepackage{wrapfig}
 \usepackage{amssymb}
 \usepackage{censor}
+\usepackage{hyperref}
 
+
+%for inline documents/reports
 \usepackage{boxedminipage}
 \newenvironment{bordered}[1]%
 {\begin{boxedminipage}{\textwidth}\textbf{\underline{#1}.}}
 {\end{boxedminipage}\\[1em]}
 
+%custom font
 \usepackage{fontspec}
 \setmainfont{Underwood Champion}
 
+%custom commands
 \newcommand{\lb}{\ensuremath{[}}
 \newcommand{\rb}{\ensuremath{]}}
 \newcommand{\degree}{$^{\circ}$}
@@ -23,12 +28,13 @@
 %\newcommand{\image}[1][2]{\begin{wrapfigure}{l}{7,5cm}
 %	\includegraphics[scale=#1]{img/scp/#2.jpg}
 %	\end{wrapfigure}} Why is this throwing out errors?
+\newcommand{\toclesssection}[1]{\section*{#1}\addtocounter{section}{1}}
 
 %Generate random numbers for the background image selection
 \usepackage{lcg}
 \reinitrand[counter=sec,first=1,last=3]
 
-%Für das Hintergrundbild
+%Backgroundimage
 \usepackage{eso-pic}
 \newcommand\BackgroundPic{
 \put(0,0){
@@ -36,364 +42,29 @@
 \vfill
 \centering
 \rand\includegraphics[width=\paperwidth,height=\paperheight,
-keepaspectratio]{img/style/bg_\thesec.pdf}%
+keepaspectratio]{img/bg_\thesec.pdf}%
 \vfill
 }}}
-
-
-
-
 
 \begin{document}
 
 \AddToShipoutPicture{\BackgroundPic}
 
-\includegraphics[scale=0.2]{img/style/logo_bwu.png}
+\includegraphics[scale=0.2]{img/logo_bwu.png}
+\renewcommand\contentsname{}
 \tableofcontents
 \newpage
 
-\section{SCP 001 - Awaiting De-classification \lb BLOCKED\rb}
-\lb BLOCKED\rb
-
-\section{SCP 002 - The "Living" Room}
-\textbf{Item \#:} SCP-002
-
-Object Class: Euclid
-
-\begin{wrapfigure}{l}{7,5cm}
-\includegraphics[scale=0.255]{img/scp/002.jpg}
-\end{wrapfigure}
-
-Special Containment\linebreak Procedures: SCP-002 is to remain connected to a suitable power supply at all times, to keep it in what appears to be a recharging mode. In case of electrical outage, the emergency barrier between the object and the facility is to be closed and the immediate area evacuated. Once facility power is re-established, alternating bursts of X-ray and ultraviolet light must strobe the area until SCP-002 is re-affixed to the power supply and returned to recharging mode. Containment area is to be kept at negative air pressure at all times.
-
-Teams including a minimum of two (2) members are required within 20 meters of SCP-002 or its containment area. Personnel should maintain physical contact with one another at all times to confirm there is another person present as perception may be dulled, skewed, or influenced by proximity to the object.
-
-No personnel below Level 2 are permitted within SCP-002. This requirement may be waived via written authorization from two (2) off-site O5-level administrators. Command staff issued such a waiver must be escorted by at least five (5) Level 3 Security personnel for the duration of their contact and must temporarily surrender their rank and security clearance. Following contact, command staff will be escorted at least 5 km from SCP-002 to undergo a seventy-two (72)-hour quarantine and psychological evaluation. If deemed fit for return to duty by psych staff, rank and security clearance may be restored when quarantine expires.
-
-Description: Refer to the Mulhausen Report \lb cross-ref:\linebreak document00.023.603\rb for details related to object's discovery. SCP-002 resembles a tumorous, fleshy growth with a volume of roughly 60 m$^3$ (or 2000 ft$^3$). An iron valve hatch on one side leads to its interior, which appears to be a standard low-rent apartment of modest size. One wall of the room possesses a single window, though no such opening is visible from the exterior. The room contains furniture which, upon close examination, appears to be sculpted bone, woven hair, and various other biological substances produced by the human body. All matter tested thus far show independent or fragmented DNA sequences for each object in the room.
-
-Reference: To date, subject has been responsible for the disappearances of seven personnel. It has also in its time at the facility further furnished itself with two lamps, a throw rug, a television, a radio, a beanbag chair, three books in an unknown language, four children's toys, and a small potted plant. Tests with a variety of lab animals including higher primates have failed to provoke a response in SCP-002. Cadavers as well fail to produce any effect. Whatever process the subject uses to convert organic matter into furnishings is apparently only facilitated by the introduction of living humans.
-
-\begin{bordered}{Mulhausen Report \lb 00.023.603\rb}
-
-The following is a brief report detailing the discovery of SCP-002
-
-Subject was discovered in a small crater in northern Portugal where it struck the Earth from orbit. Encased in a shell of thick rock, the fleshy exterior of the object was exposed by the impact. A native farmer happened upon the site and reported his findings to the village elder. Subject gained SCP attention when a Level 4 agent posted in the area detected a small radioactive anomaly generated by the object.
-
-A collection squad of SCP security personnel led by General Mulhausen was immediately dispatched to the area where they quickly secured the subject in a large container and performed initial testing with subjects recruited from the nearby village. Three men individually sent into the structure subsequently disappeared. Upon discovering this deadly property of the subject, General Mulhausen issued a Level 4a Termination Order of any witnesses (roughly 1/3 of the village) to ensure no outside knowledge of the object and initiated its transport to SCP facility \expunged.
-
-During preparation for transport, four SCP security personnel were inexplicably drawn inside the object where they too immediately disappeared. Following inspection, it appeared as if the object had "grown" several new furnishings and was beginning to look like the interior of an apartment room. General Mulhausen immediately ordered the requisition of several Class III HAZMAT suits for the remaining security team members, who proceeded to lift the container onto a waiting freight ship for transport to the SCP containment facility.
-
-\expunged
-
-\expunged
-
-Following the termination of General Mulhausen, SCP-002 was re-secured by SCP staff and brought into special containment in \classified, where it currently resides. Command staff with any authority below Level 2 have been denied access to the SCP-002 container without prior approval of at least two Level O5 command staff after the Mulhausen incident.
-
-\end{bordered}
-
-\section{SCP 003 - Biological Motherboard}
-Item \#: SCP-003
-
-Object Class: Euclid
-
-\begin{wrapfigure}{l}{7,5cm}
-\includegraphics[scale=0.34]{img/scp/003.jpg}
-\end{wrapfigure}
-
-Special Containment\linebreak Procedures: SCP-003 is to be maintained at a constant temperature of no less than 35\degree C and ideally kept above 100\degree C. In event of total power failure, assigned personnel must use their body heat to keep SCP-003-1 above the critical temperature. All personnel who have come in physical contact with SCP-003-1 are to immediately report for sterilization afterwards.
-
-SCP-003-1 must not be removed from SCP-003-2 except in case of emergency procedures detailed above. Any significant change in SCP-003-2's rune activity (including pattern, frequency, or color) should be reported within three (3) hours of occurrence. Cessation of rune activity must be reported immediately. SCP-003-2 must be supplied with power via the source designated Generator 003-IX at all times; refer to attached documentation for details.
-
-Description: SCP-003 was located by remote viewing team SRV-04 Beta (see attached documents). SCP-003 consists of two related components of separate origin, referred to as SCP-003-1 and SCP-003-2.
-
-SCP-003-1 appears to be composed of chitin, hair, and nails of unknown biology similar to \redacted, arranged in a configuration similar to that of a computer motherboard. Testing reveals SCP-003-1 to predate earliest known circuit boards by \redacted. SCP-003-1 is considered sentient but not actively dangerous except under certain conditions (see addenda and attached documents).
-
-SCP-003-1 was found on a stone tablet, SCP-003-2, on which it currently resides. The runes on SCP-003-2 are not part of any known language, and flicker with pale tones. These are effects of communication, interpretable by \expunged.
-
-Analysis has shown that SCP-003-1 and SCP-003-2 have different origins. SCP-003-2 is controlled by a (non-biological) internal computer, the contents of which are mostly inaccessible without risk of damaging SCP-003-2. SCP-003-2 is capable of controlled emissions of radiation, including heat and \redacted. It is considered probable that SCP-003-2 was created for the purpose of containing SCP-003-1. Methods detailed in Addendum 003-01 have allowed access to some data contained in SCP-003-2; while interpretation is not conclusive, contents may refer to a past and/or potential future \censor{XX}-class restructuring event caused by SCP-003-1.
-
-SCP-003-2 contains an internal power source of \linebreak \expunged, which appears to have been losing power since \censor{XXXXXXXXXX} before discovery by SRV-04 Beta. It appears possible that SRV-04 Beta was deliberately contacted by SCP-003-2 via \expunged Other organizations have also been alerted to SCP-003's existence, possibly by similar means. Despite this activity, SCP-003-2 does not appear to be sentient, based on \redacted and its lack of reaction to \redacted including M03-Gloria procedures.
-
-When SCP-003 drops below the temperature of 35\degree C, both components react.
-
-First, SCP-003-1 enters a growth state characterized by an exponential increase in mass. This growth state consists of two stages. In both stages, SCP-003-1 partially fuels its growth by converting matter around it, starting with any surrounding inorganic material, including atmospheric elements, then nonliving organic material, including cells of dead skin, hair, chitin, enamel, keratin, and other biological materials.
-
-The first stage is the 'default' stage; the second stage begins when SCP-003-1 comes in contact with living organic material. In its second stage, SCP-003-1 may pause, slow or change its growth, and will also reprocess inorganic and nonliving organic elements into functionally similar structures while \expunged
-
-While growth is consistent in the first stage, in the second stage SCP-003-1's growth rate is diminished by 20-90\% so long as SCP-003-1 remains in contact with living organic material. The percentage is determined by the complexity of the organism(s) in contact with SCP-003-1; as confirmed by \redacted readings, SCP-003-1 appears to devote a large amount of processing power to analysis of living organic material.
-
-During each of SCP-003-1's growth stages, SCP-003-2 releases bursts of radiation that temporarily inhibit SCP-003-1's growth, or reverse this growth when the temperature of SCP-003-1 rises above 100\degree C. Similar radiation emissions may be produced via \expunged.
-
-Addendum 003-01: Acting on information gathered from linguistic analysis of SCP-003-2's runes and \expunged, Research Team M03-Gloria has managed to establish a link between SCP-003 and \expunged for analysis of functions. SCP-003-1 must now be considered sentient, and is to be kept a minimum of 1 km from \expunged and the resulting "by-product" at all times.
-
-Addendum 003-02: SCP-003-2's power loss has been exacerbated by the procedures performed by M03-Gloria. On orders of O5-\censor{XX}, M03-Gloria will continue procedures.
-
-Addendum 003-03 \expunged During this process, SCP-003-1 doubled its mass and began rapid structural growth. Temperature was immediately returned to 100\degree C. Growth and mass increase of SCP-003-1 continued for 9 minutes and 6 seconds, at which time a sustained radiation spike was produced by SCP-003-2. In response, SCP-003-1 returned to its normal state in 3 minutes and 39 seconds. New growth dissolved into a dusty residue which was collected for analysis. Both SCP-003-1 and SCP-003-2 ceased all detectable activity. SCP-003-2 did not resume activity until connected \redacted external power source. SCP-003-2's runes glowed uniformly gray and did not resume normal activity for three (3) hours, and afterwards \expunged SCP-003-2 no longer appears to be able to maintain containment area at a temperature above 35\degree C without external power supplied by \redacted (designated Generators 003-III through IX).
-
-Addendum 003-04: The procedure detailed in Addendum 003-03 was repeated, and SCP-003-1 again entered a growth state. After 10 minutes and 13 seconds, SCP-003-2 once again produced a sustained radiation spike. SCP-003-1's growth stopped for 36 seconds, then resumed at its previous pace.
-
-On quadrupling its mass, SCP-003-1 formed a coherent outer shell and body, which initially took a form similar in shape to an ophiuroid (brittle star) of fifteen meters in diameter (including what appeared to be a central processor of three meters in diameter), formed sensory organs that appeared to scan the surrounding environment, and partially converted its containment area to \redacted. SCP-003-1 then breached containment, entering the observation gallery where nine members of M03-Gloria were present. On physical contact with team members, SCP-003-1 entered stage two of its growth, and \expunged SCP-003-1 stopped growth for 15 minutes. SCP-003-1 then resumed growth, and rearranged the component parts of the center of its form to the shape of a three-meter-tall female humanoid, with peripheral "tentacles" shifting to extrude primarily from SCP-003-1's newly formed "hair" and spine. SCP-003-1 then produced rudimentary vocalizations and \expunged
-
-An unknown Caucasian male, later identified as \redacted, approached the compromised containment area in company of a full squad of agents. \redacted claimed to be acting on orders of O5-\censor{XX} and attempted communication with SCP-003-1. \expunged Agent \censor{XXXX} of M03-Gloria successfully restored power to SCP-003-2 and activated backup generators to return the temperature to 100\degree C. SCP-003-1 returned to its normal state in 21 minutes and 7 seconds, and was successfully re-contained without incident.
-
-All nine members of M03-Gloria affected by SCP-003-1 were afterwards found to be physically unharmed, with no residual effects besides minor psychological trauma. The converted materials of SCP-003's former containment area did not dissolve and are now under analysis.
-
-Addendum 003-05: In light of the previous incident, O5-\censor{XX} \expunged by joint decision of O5-\censor{XX}, O5-\censor{XX}, and O5-\censor{XX}. All M03-Gloria procedures have been indefinitely suspended.
-
-\newpage
-\section{SCP 004 - The 12 Rusty Keys and the Door}
-Item \#: SCP-004
-
-Object Class: Euclid
-
-\begin{wrapfigure}{l}{7,5cm}
-\includegraphics[scale=1.6]{img/scp/004.jpg}
-\end{wrapfigure}
-
-Special Containment\linebreak Procedures: When handling items SCP-004-2 through SCP-004-13, proper procedure is vital. The items are not permitted off-site unless accompanied by two (2) Level 4 security personnel. Under no circumstances should any other component of SCP-004 be taken through SCP-004-1. The effects of doing so are as yet unknown, and the current cost of experimentation makes further research impractical. Should any of the objects contained within SCP-004-1 break containment, or the facility be breached, the keys must be brought inside and the door closed prior to activation of Site 62’s on-site warhead. Unauthorized removal of keys from the testing area is grounds for immediate termination.
-
-Level 1 clearance is required for basic access to SCP-004-1; Level 4 clearance is required for use of SCP-004-2 to -13.
-
-Description: SCP-004 consists of an old wooden barn door (SCP-004-1) and a set of twelve (12) rusted steel keys (SCP-004-2 through SCP-004-13). The door itself is the entrance to an abandoned factory in \expunged.
-
-Chronological History
-07/02/1949: A group of three juveniles trespassing on federal property near \censor{XXXXXXXXXX} find the door. According to their testimony, they found a set of rusted keys in an iron lockbox and determined what door the keys unlock. The juveniles are taken into custody after they contact Sheriff \censor{XXXXXXXXXXXXXXXXX} when one of their friends (SCP-004-CAS01) goes missing.
-
-07/03/1949: Local authorities find the severed right hand of SCP-004-CAS01 eight kilometers from SCP-004-1. Other parts of SCP-004-CAS01's body are found scattered as far as 32 km from the factory. Under interrogation, the apprehended juveniles tell authorities that upon opening the door with one of the keys, SCP-004-CAS01 was torn into several pieces, each of which disappeared. At this point, the SCP Foundation takes over the investigation.
-
-07/04/1949: SCP Agent \censor{XXXXX} obtains the keys from the local authorities to begin testing. Tests show that SCP-004-2 through SCP-004-13 all fit into a single lock on the large barred door. 12 Class D personnel are assigned to test the effects of the door. Of the twelve (12) test subjects each trying a different key to enter the room, only two (2) survive. Opening the door with any key except SCP-004-7 or SCP-004-12 caused the test subjects to be torn apart in multiple directions; however, no dismembered parts were found until later. At the time of writing, only two (2) parts of each subject have been recovered (with the exception of the subject using SCP-004-\censor{X}, whose pieces were scattered in close proximity). The others have, for all intents and purposes, vanished from existence.
-
-Of the two surviving subjects, only one (having used SCP-004-7) returned unharmed. The other came back in a near-catatonic state, able only to remove himself from the room and then collapse on the floor, and had to be restrained to prevent him from gouging out his eyes (see Appendix A: Mental Health Effects of SCP-004). The subject using SCP-004-7 said that he had entered a large room, impossibly big for the size of the attached building. After his exit, SCP-004-1 was propped open and an armed squad of Level 3 personnel entered. The size of the room is impossible to measure and the door frame and the individuals in the room are the only part of the room that can be felt or illuminated.
-
-07/16/1949: The juvenile suspects and Sheriff \censor{XXXXXXXXXXX} \censor{XXXXX} are terminated.
-
-08/02/1949: \censor{XXXXXXXXXXXXXXXXX} is declared a hazardous area "due to unexploded ordnance" and fences erected in order to prevent civilian ingress. Tests to determine safety of exposure to environment behind SCP-004-1 begin.
-
-12/01/1950: Space-time anomalies resulting from exposure to SCP-004 are confirmed. Testing is suspended until further notice.
-
-07/03/19\censor{XX}: The unaccounted-for remains of SCP-004-CAS01 appear unexpectedly outside SCP-004-1. Despite being killed decades before, the remains of SCP-004-CAS01 are not decomposed in any manner and are still warm to the touch. Blood remains uncoagulated. The remains are remanded for testing.
-
-07/04/19\censor{XX}: The unaccounted-for remains of one of the twelve (12) original test subjects appear in similar manner to those of SCP-004-CAS01. The remains have been designated SCP-004-CAS02. Records suggest that both SCP-004-CAS01 and CAS02 used SCP-004-\censor{XX}.
-
-03/21/1999: With the massive proliferation of nuclear weapons and World War III only \censor{XX} years away, construction has begun on a site inside SCP-004-1. The site is to stock supplies for \censor{XXXXXXX} person-days.
-
-04/21/1999: \censor{XXXXXXXXXXXXXXXXX} has ordered the site inside SCP-004-1 to be expanded to include emergency storage for all mobile SCP-\censor{XXX} specimens and a \censor{XX}-petabyte database for the storage of all SCP data. The facility is now referred to as Site-62.
-
-09/25/2000: Site-62 is operational. Labs and containment units are complete and can contain the most dangerous specimens. Backup of the SCP database has begun.
-
-01/25/2001: Due to time anomalies (see “Space-Time Anomalies” below), all personnel working at Site-62 are now required to reside on-site permanently. Families of personnel are to be informed that loved ones perished in an industrial accident. Cloned bodies have been prepared for funeral.
-
-07/14/2003: Massive power outage across Northeast United States and through Canada. Due to the initial failure of multiple SCP generators, Site-62 was without power for fifty-three (53) minutes. During those fifty-three (53) minutes, those on site were completely without any source of light. They reported "sensing" creatures and people, although no abnormal entities could be seen or felt. Selected facility personnel were allowed to read \censor{XXXXXXXXXXXX} (Appendix A) and said the creatures "sensed" were of humanoid size but otherwise similar to the massive green creature described.
-
-Space-Time Anomalies
-SCP-004 seems to propagate spatiotemporal anomalies. Personnel leaving the facility report losing time. Those who have been in the site for weeks insist that they had only been in the facility for several days, and records of work completed and supplies consumed support their claims. Other temporal anomalies involve SCP-004-2 through -13, especially the reappearance of SCP-004-CAS01 and SCP-004-CAS02 exactly \censor{XX} years after using SCP-004-\censor{XX}. \censor{XXXXXXXXXXXXXXXXXXXX} has been assigned to investigate all aspects of these time anomalies. Spatial anomalies include the impossibly large dimensions of the area opened by SCP-004-7. Similarly, the 2003 blackout incident suggests that there exists an alternate plane of existence within the same space that Site-62 occupies.
-
-Further Notes
-Testing on SCP-004 reveals that ten (10) of the keys open SCP-004-1 on a dimension where the laws of physics and topology are significantly different than those of our home dimension. Test subjects meeting these hostile conditions are torn apart, their body parts deposited in various locations, only three of which have been verified to be on Earth. Material deposited at two of these points appears immediately; material deposited at the third appears exactly \censor{XX} years into the future. The other seven locations are currently unknown.
-
-Current testing focuses on two avenues of research. The first is finding ways to survive SCP-004’s hostile topologies. The second \expunged suggest that SCP-004-2 through -13 may open doors other than SCP-004-1.
-
-Appendix A: Mental Health Effects of SCP-004-12
-All Class D personnel using SCP-004-12 return in a catatonic state, unable to speak. Some may have enough energy left to try to claw out their eyes. Of the 16 subjects, only 4 have survived. Only one has regained speech, following long-term psychotherapy. He was able to tell the psychiatrist that he saw a massive green creature, so large that much of its body extended beyond his field of view. He reported innate fear and sudden recognition, “as if it were something buried deep in \lb his\rb primal fears,” and forced implantation of “incomprehensible” memories. Subject displays acute anterograde and retrograde amnesia.
-
-Appendix B
-Item \#: SCP-004-14
-
-Date of Discovery: 09/02/1950
-
-Origin of Object: Object was discovered elsewhere in factory area, in the previously undiscovered manager's office.
-
-Description: Object appears as a large (182 cm X 129 cm), unvarnished wooden box. The box may be unlocked by the "safe" key, SCP-004-7, as well as five of the "unsafe" keys (see Document SCP-004-1).
-
-Upon unlocking SCP-004-14 with SCP-004-7, the box opens automatically on hinges. The volume of the space inside is precisely five times greater than the outer dimensions imply. Items placed within while the lid remains open do not affect the weight or any other properties of the box. When the lid is closed and locked, however, all items inside vanish irretrievably. Personnel locked inside the box are also irretrievable, although losing personnel in this fashion appears to affect significantly the dreams experienced by \expunged.
-
-\newpage
-\section{SCP 005 - Skeleton Key}
-Item \#: SCP-005
-
-Object Class: Safe
-
-\begin{wrapfigure}{l}{7,5cm}
-\includegraphics[scale=1]{img/scp/005.jpg}
-\end{wrapfigure}
-
-Special Containment\linebreak Procedures: SCP-005 poses no immediate risk in any direct sense. Even so, its unique functions require special measures be taken to restrict access and manipulation of the object. Approval of at least one (1) Level 4 personnel is required for the removal of object from its containment area.
-
-Description: In appearance, SCP-005 resembles an ornate key, displaying the characteristics of a typical mass produced key used in the 1920s. The key was discovered when a civilian used it to infiltrate a high security facility. SCP-005 seems to have the unique ability to open any and all forms of lock (See Appendix A), be they mechanical or digital, with relative ease. The origin of this ability has yet to be determined.
-
-Additional Notes: SCP-005 may be used as a replacement for lost security passes, but only under the supervision of at least one (1) Level 4 personnel. SCP-005 may not be used for vending machine repairs, opening lockers, or for any personnel's spare home key. Removal of the object from the compound will result in immediate termination.
-
-Appendix A: While SCP-005 has been shown to be effective in removing almost any form of locking device, further experiments have shown that efforts to disguise the purpose or identity of a lock have proven at least somewhat successful in defeating SCP-005's ability. In approximately 50\% of cases where a volunteer was not able to identify a locking device as such, SCP-005 was not successful in deactivating the device. Due to these results, SCP-005 has been tentatively classified as 'sentient' and further tests are being run to determine its cognitive abilities. However, there are no results that show any traits that prevent it from being able to identify any particular locking device, only that the aforementioned device has been heavily concealed and disguised.
-
-\section{SCP 006 - Fountain of Youth}
-Under direct orders of the founder, access is limited to those with Overseer clearance
-Overseer Clearance Granted
-
-Item \#: SCP-006
-
-Object Class: Safe
-
-\begin{wrapfigure}{l}{7,5cm}
-\includegraphics[scale=0.55]{img/scp/006.jpg}
-\end{wrapfigure}
-
-Special Containment\linebreak Procedures: Whereas the nature of SCP-006 does not warrant any extensive containment, a certain level of secrecy is necessary regarding the object's existence and properties, for obvious reasons. The following procedures are required not for personnel safety, but to deny or hide knowledge of SCP-006's effects from the personnel who interact with it.
-
-1: All personnel interacting with SCP-006 in any physical way are required to wear modified class VI BNC suits. Before personnel are allowed to perform procedures, they must be briefed with Material SCP-006B or SCP-006C. SCP-006A Briefing is the correct one and is restricted to only those with O5 clearance. To assure personnel are wearing suits properly, they are to be submerged into a pool of water. Any air bubbles spotted signify a leak in the suit.
-
-2: Procedures with SCP-006 are to be carried out under extreme surveillance. In case of contact with SCP-006, the commander in charge will announce procedure \lb EXPUNGED\rb, which the personnel have been briefed to believe to mean high toxicity is present and they must evacuate.
-
-3: Any procedure in which liquid is acquired from SCP-006 must be approved by three (3) O5 level personnel. The liquid is to be transferred in a Quad-Sealant Container and under armed guard.
-
-4: If at any time personnel come into contact with SCP-006 or liquid from SCP-006, they are to be confined and terminated after sufficient studies are done. Due to the nature of SCP-006, the most effective termination method is incineration. (For full report, see file SCP006-TerO5)
-
-Description: SCP-006 is a very small spring located 60 km west of Astrakhan. Due to political reasons, Foundation Command was aware of its existence since 18\censor{XX}, but unable to secure it until 1991. On the spot of the spring, a chemical factory has been constructed as a disguise, with the majority of laborers under Foundation and/or Russian control. The liquid emitted from the spring has been chemically identified as simple mineral water in 1902, but has the unusual property of "health".
-
-Ingesting the liquid produces the following properties in human beings: the ability to regenerate DNA damaged by sufficient duplication, heightened excitement of cellular duplication, vastly improved abilities in the repair of damaged tissue, and a frightening increase in the effectiveness of the human immune system. Upon testing the liquid on animal subjects, hostile bacteria and viral agents were destroyed immediately. Many reptiles and birds were unaffected, while higher primates experienced the same benefits as humans.
-
-Addendum 1: Permission for comparing samples of SCP-006 for similarity to SCP-500 has been requested by Dr. \censor{XXXXXX}-6
-
-\newpage
-\section{SCP 007 - Abdominal Planet}
-Item \#: SCP-007
-
-Object Class: Euclid
-
-Special Containment Procedures: SCP-007 is to be contained in a sealed room measuring 10 m on each side. Room is to be furnished comfortably as a living area, along with whatever items are requested by \censor{XXXXXXXXXXXXXXX} (hereafter referred to as Subject), given that providing Subject with requested items would not compromise security. Subject is not to be allowed to leave the room, and is to be detained with force if necessary.
-
-Description: SCP-007 is located within a cavity in the abdomen of Subject. Subject is a Caucasian male, physically approximately 25 years of age (subject claims to be 28) and 176 cm in height. Most of Subject's abdomen (muscles, skin, and organs) is absent, though Subject does not appear to suffer because of this. Instead of normal flesh, a sphere composed of soil and water is present, though it does not actually come into contact with Subject's body at any point. The sphere appears to be in most respects a miniature near-duplicate of the Earth, approximately 60 cm in diameter, although continental alignment is not consistent with that of any alignment known in Earth's history. Sphere has its own weather patterns and negligible gravitational pull, in addition to microscopic organisms somewhat resembling those of modern-day Earth inhabiting it. Two intelligent species have been observed, though contact and communication with either has yet to be made. Technology levels of observed species must be checked at least once a week and, as of \censor{XX}/\censor{XXXX}, are approximately equal to that of 15th-Century Earth.
-
-Subject claims to be named \censor{XXXXXXXXXXXXXXX}, but no records of such a person can be found. Subject does not require food or water, and while he has been observed consuming both, what happens to such substances after being swallowed is unknown. Subject is intelligent (IQ has been measured at 128) and amiable, and regards the planet in his abdomen as a minor curiosity about his body. Subject seems to experience no stress about his unusual condition. When questioned about planet's origins, Subject replied, "I just woke up one day, and there it was. I don't have any idea how it got there." Subject has provided a Social Security number and driver's license number and requested that they be checked against known records. When checked, it was discovered that neither had yet been allocated.
-
-Dr. \censor{XXXXXXX} has a weekly chess game with Subject, during which Subject's mental health is evaluated. Dr. \censor{XXXXXXX} reports that Subject does not seem to mind the restricted living environment, and has yet to attempt to escape or show signs of violence or mental illness, though he has repeatedly requested a computer with an internet connection. It is recommended that this not be provided as it may be used to compromise security.
-
-\section{SCP 008 - Zombie Plague}
-\begin{center}
-$==$ LEVEL 4 CLEARANCE REQUIRED $==$\linebreak
-Security Clearance Adequate: Access Authorized
-\end{center}
-
-Item \#: SCP-008
-
-Object Class: Euclid
-
-\begin{wrapfigure}{l}{7,5cm}
-\includegraphics[scale=0.33]{img/scp/008.jpg}
-\end{wrapfigure}
-
-Special Containment\linebreak Procedures: SCP-008 samples are extreme biological hazards and all related protocols apply. Incineration and irradiation measures will be deployed in the event of political or military action which may result in the facility being dismantled; a power failure; or zero communications from operatives or outside channels during any given eight (8)-hour period. The quarantine period for operatives leaving the facility is four (4) months. If a breach has occurred, incineration and irradiation measures shall be deployed. It should be the policy of all G2 sites to not prepare an evacuation procedure.
-%\hline
-Description: SCP-008 is a complex prion, samples of which are stored in each of the known G2 sites. Research into SCP-008 is highly classified and primarily aimed at preventing research which may lead to the synthesis of SCP-008 in the distant future. Traits of the SCP-008 prion include:
-\begin{itemize}
-\item 100\% infectiousness.
-\item 100\% lethality.
-\item Transmission through exposed mucous membranes and all bodily fluids.
-\item Not airborne or waterborne.
-\end{itemize}
-Symptoms of infection with SCP-008 manifest no more than three hours after exposure, and include:
-\begin{itemize}
-\item Flu-like symptoms with high fever, plus severe dementia in later stages.
-\item Coma onset approximately 20 hours after first symptoms appear and 12 hours after noticeable dementia. Coma onset will be considered onset of death.
-\item A period of sporadic cellular necrosis occurs which comes to resemble gangrene. \item Surviving tissue assumes its original function and is highly resilient.
-\item Red blood cells greatly increase oxygen storage capacity, resulting in slower blood flow and increased muscle endurance and strength.
-\item Nervous and muscular systems are unaffected by total organ failure for several hours.
-\item Metabolism may decrease to extremely low levels, allowing subject to survive for over 10 years without nutrition.
-\item High blood viscosity results in negligible blood flow from gunshot, puncture, and slashing injuries.
-\item Conditioned behavior, motor controls, and instinctive behavioral mechanisms are damaged, and cognitive abilities are severely retarded and erratic. Animals experience excessive brain necrosis and are inactive.
-\item Subject can adapt to its damaged nervous systems but is limited to basic physical activities, including standing up, balancing on two legs, walking, biting, grabbing, and crawling. Subject will energetically move towards sights, sounds, and smells it associates with living humans. Subject will attempt to ingest living humans if physical contact is made.
-\item Neutralizing fully-infected subjects requires significant cranial trauma.
-\end{itemize}
-There is strong evidence to suggest SCP-008 itself did not form naturally on Earth, since variants of similar complexity would have displaced much of the ecosystem. In 1959, a short collaborative effort with the USSR to locate G2 sites and eliminate SCP-008 was negotiated following their discovery. The status of SCP-008 in Russian custody since collaboration ended is unknown.
-
-Addendum 008-1: SCP-500 has been found to be able to completely cure SCP-008 even in the advanced stages of the disease.
-
-\section{SCP 009 - Red Ice}
-Item \#: SCP-009
-
-Object Class: Euclid
-
-\begin{wrapfigure}{l}{7,5cm}
-\includegraphics[scale=1.3]{img/scp/009.jpg}
-\end{wrapfigure}
-Special Containment\linebreak Procedures: Subject is to be contained within a sealed storage tank of heat-resistant alloy with dimensions not less than 14m$^3$.
-
-Under no circumstances should SCP-009 be exposed to temperatures in excess of 0°C when not undergoing testing, and no mundane liquids in a solid state (especially frozen water) shall be allowed within 30 meters of the subject's containment area. Subject's chamber is to be fitted with temperature sensors which shall be monitored at all times, and is to be kept refrigerated by no fewer than three (3) redundant cooling units. Any malfunction of sensors, or of coolant systems, is to be reported and repaired immediately.
-
-If at any time the temperature in the containment area climbs above -5°C, the chamber is to be locked down immediately, and flooded with coolant until the temperature has been brought back down to between -30\degree C and -25\degree C. Atmosphere must be evacuated from the containment area when personnel are present within, and any water vapor present must be filtered and kept in the same conditions as detailed herein for no fewer than 24 hours. Any vapor displaying properties of SCP-009 is to be quarantined and added to the containment area as soon as possible.
-
-All personnel interacting with or observing the subject must wear full environmental protection suits. All personnel leaving the containment chamber must undergo dehydration of all gear, research materials, and other objects contacting SCP-009's chamber. If contamination is discovered, no material or personnel shall be permitted to exit, and a Level 2 lock-down of the containment area shall commence. Lethal force is authorized in cases of dire need, but all security forces are strongly advised to remain as far away from their targets as possible, to minimize the chance of contact with fluids contaminated by SCP-009.
-
-Description: SCP-009 is approximately 3,700 liters of a substance which exhibits a number of unique properties. While small amounts of the substance, in all phases, are as colorless as mundane water, en masse it takes on a distinct deep red hue.
-
-Its most notable property, however, is the fact that SCP-009's reaction to temperature extremes is exactly opposite that of standard H$_{2}$O: the subject assumes a liquid phase at temperatures between -100\degree C and 0\degree C, and converts into a solid state above those temperatures. At temperatures below -100\degree C, SCP-009 vaporizes into a gaseous phase similar to steam, though it still retains its red coloration when put under high pressure.
-
-Examinations of the atomic structure of SCP-009 have proved inconclusive. Tests indicate that the subject is composed of the same combination of hydrogen and oxygen as normal water, leaving researchers to speculate that the source of the subject's abnormalities may be the atoms themselves. Dr. \censor{XXXXXX} has suggested that the subject may have originated in or been altered by another reality in which the laws of physics are inverted.
-
-This theory may have some merit in light of SCP-009's marked ability to "assimilate" natural water into its mass. If placed in physical contact with any aqueous solution (be it ice, salt water, or water vapor in air), SCP-009 will "spread" and contaminate any H2O in said solution, causing it to exhibit the subject's properties. Though this capacity is present in all phases, it has been observed to progress most slowly (and thus be most containable) in the liquid phase.
-
-If the subject comes in contact with any biological source of heat, it begins a runaway reaction in which the living organism's bodily fluids are rapidly converted to SCP-009 and promptly frozen by their own body heat (because of their generally high core temperatures, mammals are particularly susceptible). Because SCP-009 produces heat while freezing (at the same rate mundane ice consumes heat while melting), the process is self-perpetuating until all available moisture is converted, or until it is halted by external interference.
-
-Experiments on D-Class personnel have illustrated the process of conversion by the subject, which has been condensed down to a series of steps:
-
-1. Initial Exposure: Subject is exposed to SCP-009, and it begins converting any water present on the exposed surface (usually skin) to exhibit its properties. Presence of mist, fog, snow, or other solid or vaporous water greatly accelerates this process.
-
-2. Surface Conversion: A thin layer of frost forms on the exposed area as body heat and heat produced by SCP-009 raise its temperature above freezing. Progression to this step can take anywhere from five (5) minutes to one (1) hour, depending on victim's body temperature. At this stage, freezing has begun progressing through the initial layers of the epidermis and soon reaches live cells.
-
-3. Deep Tissue Conversion: Exponential increase in temperature of SCP-009 causes expansion of ice crystals throughout the victim's body, resulting in widespread perforation of internal cell structure. Actual blood loss is minimal at this stage due to the crystals filling the puncture wounds, allowing subjects to remain alive and conscious for up to \censor{XX} hours.
-
-4. \expunged
-
-5. Death: Multiple organ failure and exsanguination via systemic crystallization.
-
-Testing on D-Class personnel was discontinued as of\linebreak 4/23/20\censor{XX}.
-
-Addendum: Circumstances of Retrieval: Subject was found in \censor{XXXX}, Alaska, on 11/05/19\censor{XX}. The Foundation got involved after reports were obtained from the native \censor{XXXX} Tribe, who came across the mangled bodies of a team of seal hunters which had apparently been ship-wrecked \censor{XX} kilometers from the village.
-
-All victims were found encased in red ice. Cause of death recorded as internal bleeding. On victims whose features were sufficiently intact, expressions of panic and intense pain were observed. It is surmised that the low ambient temperatures in the area retarded the freezing process. This prolonged the time to total conversion by \censor{XX} hours, and allowed the victims to remain conscious until \expunged.
-
-Addendum: 12/16/20\censor{XX}
-
-Super-cooling of SCP-009 for the purposes of experimentation is disallowed until further notice. Personnel are advised that liquid nitrogen is only to be used on the subject in controlled amounts, and only until temperatures have reached acceptable levels.
-
-Related note: Possible application of SCP-009 in cold fusion research pending evaluation.
-
-\section{SCP 010 - Collars of Control}
-Item \#: SCP-010
-
-Object Class: Safe
-
-Special Containment Procedures: The objects comprising SCP-010 are to be kept in numbered locked boxes in a high security facility. They are not to be worn except by test subjects.
-
-SCP-010 are only to be removed from storage for testing.
-
-Description: SCP-010 consists of a series of six (6) apparently identical cast iron collars with numbered metal tags and one (1) remote control. The control is SCP-010-1. The collars are SCP-010-2 through 010-7. The collars contain intricate electronic components and are powered by small (5 mm diameter, 2 mm thick) 100 V batteries. These batteries are rechargeable.
-
-The remote is a heavy black box resembling an old style hand-held radio transmitter/receiver with a primitive blue/white cathode ray screen and a series of more than 100 unlabeled buttons, as well as a frequency tuner. Through trial and error the frequencies of all six (6) currently found collars have been discovered. A label in Russian is stamped into the metal along with a logo consisting of workers building a pyramid. No official Russian corporation or government agency uses this logo or matches the words stamped into the metal.
-
-Placing the collar around the neck of a person, and securing it, allows one to control their every movement with the remote. It is also capable of producing an adrenal response and activating or deactivating the sympathetic nervous system. The most abnormal feature of the collars is the effect they have on the body morphology. They allow the user of the remote to reconfigure the shape of the victim to an extent that is apparently only limited by the knowledge of the programming language of the remote.
-
-Addendum 010-1: History
-
-SCP-010 was discovered in the basement of a lone man in the Midwestern United States after a local disappearance was connected to him. When the police raided the man's house they found SCP-010 as well as several dead bodies. One of the bodies was identified to be the man. The others were several other missing persons. Cause of death seemed to be mass suicide; however, there were signs of significant struggle first.
-
-Addendum 010-2: Disassemble experiment
-
-Test 1: SCP-010-2 taken apart piecewise, the parts labeled and several photographs taken, then reassembled.
-Result: After reassembly SCP-010-2 continues to function.
-
-Test 2: SCP-010-8 constructed identically to SCP-010-2 but with the closest approximations available to the unreplicable components.
-Result: SCP-010-8 fails to function.
-
-Test 3: Unreplicable components from SCP-010-2 placed into proper locations on SCP-010-8.
-Result: SCP-010-2 ceases functioning with removal of components. SCP-010-8 begins functioning.
-
-Test 4: Components returned to SCP-010-2. Replicable components in SCP-010-2 replaced randomly with replicas
-Result: SCP-010-2 begins functioning with return of components. Changing replicable components for replicas does not significantly reduce functionality. Replacement of a damaged transistor decreased time from transmission to effect of SCP-010-2 response to commands entered in the remote by 12%.
-
-Addendum 010-3:
-
-SCP-010 has been demonstrated to work more effectively in creating unskilled labor than for any other task. The logo is apt. \textasciitilde Dr. \censor{XXXXX}
+\include{scp/001}
+\include{scp/002}
+\include{scp/003}
+\include{scp/004}
+\include{scp/005}
+\include{scp/006}
+\include{scp/007}
+\include{scp/008}
+\include{scp/009}
+\include{scp/010}
 
 
 \end{document}
