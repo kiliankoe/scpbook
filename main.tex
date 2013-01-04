@@ -6,13 +6,8 @@
 \usepackage{amssymb}
 \usepackage{censor}
 \usepackage{hyperref}
-
-
-%for inline documents/reports
+\usepackage{ulem}
 \usepackage{boxedminipage}
-\newenvironment{bordered}[1]%
-{\begin{boxedminipage}{\textwidth}\textbf{\underline{#1}.}}
-{\end{boxedminipage}\\[1em]}
 
 %custom font
 \usepackage{fontspec}
@@ -25,10 +20,8 @@
 \newcommand{\redacted}{\lb REDACTED\rb}
 \newcommand{\expunged}{\lb DATA EXPUNGED\rb}
 \newcommand{\classified}{\lb CLASSIFIED\rb}
-%\newcommand{\image}[1][2]{\begin{wrapfigure}{l}{7,5cm}
-%	\includegraphics[scale=#1]{img/scp/#2.jpg}
-%	\end{wrapfigure}} Why is this throwing out errors?
 \newcommand{\toclesssection}[1]{\section*{#1}\addtocounter{section}{1}}
+\newcommand{\fakebold}[1]{{\addfontfeatures{FakeBold}#1}}
 
 %Generate random numbers for the background image selection
 \usepackage{lcg}
@@ -50,7 +43,10 @@ keepaspectratio]{img/bg_\thesec.pdf}%
 
 \AddToShipoutPicture{\BackgroundPic}
 
-\includegraphics[scale=0.2]{img/logo_bwu.png}
+\begin{center}
+\includegraphics[scale=0.3]{img/logo_bwu.png}
+\end{center}
+
 \renewcommand\contentsname{}
 \tableofcontents
 \newpage
@@ -66,6 +62,8 @@ keepaspectratio]{img/bg_\thesec.pdf}%
 \include{scp/009}
 \include{scp/010}
 \include{scp/011}
+\include{scp/012}
+\include{scp/013}
 
 
 \end{document}
