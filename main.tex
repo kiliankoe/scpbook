@@ -7,10 +7,10 @@
 \usepackage{censor}
 \usepackage{ulem}
 \usepackage{boxedminipage}
-\usepackage{tocloft}
 \usepackage{setspace}
 \usepackage{hyperref}
 
+%metadata
 \hypersetup{
 pdftitle = {SCP - Secure, Contain, Protect},
 pdfkeywords = {scp,creepypasta,weird,supernatural},
@@ -23,10 +23,6 @@ pdfkeywords = {scp,creepypasta,weird,supernatural},
     ItalicFeatures={FakeSlant=0.2}
   ]{Underwood Champion}
 
-%Supposed to be used for line spacing between the items, not the entire block
-\setlength\cftbeforetoctitleskip{10pt}
-\setlength\cftaftertoctitleskip{0pt}
-
 %custom commands
 \newcommand{\lb}{\ensuremath{[}}
 \newcommand{\rb}{\ensuremath{]}}
@@ -35,7 +31,7 @@ pdfkeywords = {scp,creepypasta,weird,supernatural},
 \newcommand{\expunged}{\lb DATA EXPUNGED\rb}
 \newcommand{\classified}{\lb CLASSIFIED\rb}
 \newcommand{\toclesssection}[1]{\section*{#1}\addtocounter{section}{1}}
-\newcommand{\fakebold}[1]{{\addfontfeatures{FakeBold}#1}}
+\newcommand{\fakebold}[1]{{\addfontfeatures{FakeBold}#1}} %occurrences still have to be replaced in 001-020 before removal
 \renewcommand{\textbf}[1]{{\addfontfeatures{FakeBold}#1}}
 
 %Generate random numbers for the background image selection
@@ -58,11 +54,14 @@ keepaspectratio]{img/bg_\thesec.pdf}%
 
 \begin{document}
 
-\AddToShipoutPicture{\BackgroundPic}
+%\AddToShipoutPicture{\BackgroundPic}
 
+\begin{figure}[t]
+\vspace*{-3cm}
 \begin{center}
-\includegraphics[scale=0.3]{img/logo_bwu.png}
+\includegraphics[scale=0.25]{img/logo_bwu.png}
 \end{center}
+\end{figure}
 
 \renewcommand\contentsname{}
 \begin{spacing}{0.1}
@@ -91,6 +90,8 @@ keepaspectratio]{img/bg_\thesec.pdf}%
 \include{scp/019}
 \include{scp/020}
 \include{scp/021}
+\include{scp/022}
+\include{scp/022a}
 
 
 \end{document}
