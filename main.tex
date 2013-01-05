@@ -5,13 +5,27 @@
 \usepackage{wrapfig}
 \usepackage{amssymb}
 \usepackage{censor}
-\usepackage{hyperref}
 \usepackage{ulem}
 \usepackage{boxedminipage}
+\usepackage{tocloft}
+\usepackage{setspace}
+\usepackage{hyperref}
+
+\hypersetup{
+pdftitle = {SCP - Secure, Contain, Protect},
+pdfkeywords = {scp,creepypasta,weird,supernatural},
+}
 
 %custom font
 \usepackage{fontspec}
-\setmainfont{Underwood Champion}
+\setmainfont[
+    ItalicFont={Underwood Champion},
+    ItalicFeatures={FakeSlant=0.2}
+  ]{Underwood Champion}
+
+%Supposed to be used for line spacing between the items, not the entire block
+\setlength\cftbeforetoctitleskip{10pt}
+\setlength\cftaftertoctitleskip{0pt}
 
 %custom commands
 \newcommand{\lb}{\ensuremath{[}}
@@ -22,6 +36,7 @@
 \newcommand{\classified}{\lb CLASSIFIED\rb}
 \newcommand{\toclesssection}[1]{\section*{#1}\addtocounter{section}{1}}
 \newcommand{\fakebold}[1]{{\addfontfeatures{FakeBold}#1}}
+\renewcommand{\textbf}[1]{{\addfontfeatures{FakeBold}#1}}
 
 %Generate random numbers for the background image selection
 \usepackage{lcg}
@@ -39,6 +54,8 @@ keepaspectratio]{img/bg_\thesec.pdf}%
 \vfill
 }}}
 
+
+
 \begin{document}
 
 \AddToShipoutPicture{\BackgroundPic}
@@ -48,7 +65,9 @@ keepaspectratio]{img/bg_\thesec.pdf}%
 \end{center}
 
 \renewcommand\contentsname{}
+\begin{spacing}{0.1}
 \tableofcontents
+\end{spacing}
 \newpage
 
 \include{scp/001}
@@ -66,6 +85,12 @@ keepaspectratio]{img/bg_\thesec.pdf}%
 \include{scp/013}
 \include{scp/014}
 \include{scp/015}
+\include{scp/016}
+\include{scp/017}
+\include{scp/018}
+\include{scp/019}
+\include{scp/020}
+\include{scp/021}
 
 
 \end{document}
