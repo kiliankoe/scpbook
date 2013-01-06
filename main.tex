@@ -16,56 +16,21 @@ pdftitle = {SCP - Secure, Contain, Protect},
 pdfkeywords = {scp,creepypasta,weird,supernatural},
 }
 
-%custom font
-\usepackage{fontspec}
-\setmainfont[
-    ItalicFont={Underwood Champion},
-    ItalicFeatures={FakeSlant=0.2}
-  ]{Underwood Champion}
-
 %custom commands
-\newcommand{\lb}{\ensuremath{[}}
-\newcommand{\rb}{\ensuremath{]}}
 \newcommand{\degree}{$^{\circ}$}
-\newcommand{\redacted}{\lb REDACTED\rb}
-\newcommand{\expunged}{\lb DATA EXPUNGED\rb}
-\newcommand{\classified}{\lb CLASSIFIED\rb}
 \newcommand{\toclesssection}[1]{\section*{#1}\addtocounter{section}{1}}
-\renewcommand{\textbf}[1]{{\addfontfeatures{FakeBold}#1}}
-
-%Generate random numbers for the background image selection
-\usepackage{lcg}
-\reinitrand[counter=sec,first=1,last=3]
-
-%Backgroundimage
-\usepackage{eso-pic}
-\newcommand\BackgroundPic{
-\put(0,0){
-\parbox[b][\paperheight]{\paperwidth}{%
-\vfill
-\centering
-\rand\includegraphics[width=\paperwidth,height=\paperheight,
-keepaspectratio]{img/bg_\thesec.pdf}%
-\vfill
-}}}
-
-
 
 \begin{document}
 
-%\AddToShipoutPicture{\BackgroundPic}
-
 \begin{figure}[t]
-\vspace*{-3cm}
 \begin{center}
 \includegraphics[scale=0.25]{img/logo_bwu.png}
 \end{center}
 \end{figure}
 
 \renewcommand\contentsname{}
-\begin{spacing}{0.1}
 \tableofcontents
-\end{spacing}
+
 \newpage
 
 \include{scp/001}
@@ -96,6 +61,12 @@ keepaspectratio]{img/bg_\thesec.pdf}%
 \include{scp/023b}
 \include{scp/024}
 \include{scp/025}
+\include{scp/026}
+\include{scp/026a}
+\include{scp/026b}
+\include{scp/026c}
+\include{scp/027}
+\include{scp/028}
 
 
 \end{document}
